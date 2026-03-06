@@ -10,9 +10,16 @@ from sklearn.preprocessing import LabelEncoder
 from .config import Config
 
 # from .synthesizers.ctgan_dp import CTGANSynthesizer
-from .custom_models.synthesizers.ctgan import CTGANSynthesizer
-from .custom_models.synthesizers.tvae import TVAESynthesizer
-from sdv.tabular import GaussianCopula
+try:
+    from .custom_models.synthesizers.ctgan import CTGANSynthesizer
+    from .custom_models.synthesizers.tvae import TVAESynthesizer
+except ImportError:
+    CTGANSynthesizer = None
+    TVAESynthesizer = None
+try:
+    from sdv.tabular import GaussianCopula
+except ImportError:
+    GaussianCopula = None
 
 # from faker import Faker
 # from tqdm.auto import tqdm
