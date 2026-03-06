@@ -1,7 +1,7 @@
 """Synthesizers module."""
 
-from ctgan.synthesizers.ctgan import CTGANSynthesizer
-from ctgan.synthesizers.tvae import TVAESynthesizer
+from ctgan import CTGAN as CTGANSynthesizer
+from ctgan import TVAE as TVAESynthesizer
 
 __all__ = (
     'CTGANSynthesizer',
