@@ -28,7 +28,7 @@ def dataReading(path, psuedoMode, s3_access_key, s3_security_key, s3_security_to
             return {"error":"CustomError"}
     if not psuedoMode:
         try:
-            dataFrame.fillna(dataFrame.mean(), inplace=True)
+            dataFrame.fillna(dataFrame.select_dtypes(include='number').mean(), inplace=True)
         except:
             return {"error":"InternalError"}
     fileName = path.split("\\")[-1] if "\\" in path else path.split("/")[-1]
