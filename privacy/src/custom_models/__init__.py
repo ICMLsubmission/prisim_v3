@@ -7,8 +7,8 @@ __email__ = 'dailabmit@gmail.com'
 __version__ = '0.5.2.dev0'
 
 from ctgan.demo import load_demo
-from ctgan.synthesizers.ctgan import CTGANSynthesizer
-from ctgan.synthesizers.tvae import TVAESynthesizer
+from ctgan import CTGAN as CTGANSynthesizer
+from ctgan import TVAE as TVAESynthesizer
 
 __all__ = (
     'CTGANSynthesizer',
