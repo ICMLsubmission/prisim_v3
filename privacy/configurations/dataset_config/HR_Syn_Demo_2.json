@@ -1,0 +1,1 @@
+{"discard": [null], "name": [null], "continous": ["YearsAtCompany", "PercentSalaryHike", "MonthlyIncome", "TotalWorkingYears", "Age"], "discrete": ["Department", "Education", "Gender", "EducationField", "JobLevel"], "zip": [null], "date": [null], "address": [null]}
